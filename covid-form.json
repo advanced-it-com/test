@@ -1,0 +1,65 @@
+[
+    { 
+	   questionId: 1,
+	   text :  "قابلتشي شخص مريض بالفيروس",
+	   suggestions: [
+	      {
+		      suggestionId : 1,
+		      text:    "Yes"  ,
+              score: 20
+              nextQuestion: 2	
+          }	,
+
+         {
+		      suggestionId : 2,
+		      text:    "No"  ,
+              score: 0
+              nextQuestion: 3	
+          }	
+		  
+	   ]
+	},
+	
+	{ 
+	   questionId: 2,
+	   text :  "عندكشي سخانة فوق87",
+	   suggestions: [
+	      {
+		      suggestionId : 1,
+		      text:    "Yes"  ,
+              score: 20
+              nextQuestion: null	
+          }	,
+
+         {
+		      suggestionId : 2,
+		      text:    "No"  ,
+              score: 0
+              nextQuestion: null	
+          }	
+		  
+	   ]
+	},
+	
+	
+	{ 
+	   questionId: 3,
+	   text :  "عندكشي ضيق في التنفس",
+	   suggestions: [
+	      {
+		      suggestionId : 1,
+		      text:    "Yes"  ,
+              score: 20
+              nextQuestion: 2	
+          }	,
+
+         {
+		      suggestionId : 2,
+		      text:    "No"  ,
+              score: 0
+              nextQuestion: 3	
+          }	
+		  
+	   ]
+	}
+]
