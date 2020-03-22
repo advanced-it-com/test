@@ -1,0 +1,14 @@
+<app-home></app-home>
+<div class="card m-3 float-sm-right" style="width: 25rem; text-align: center">
+    <div *ngFor="let question of questions" class="container" style="text-align: right">
+        <strong class="container">{{question.text}}</strong>
+        <div class="container">
+            <div *ngFor="let suggestion of question.suggestions" class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="{{suggestion.suggestionId}}" name="{{suggestion.suggestionId}}" class="custom-control-input">
+                <label class="custom-control-label" for="{{suggestion.suggestionId}}">
+                    {{suggestion.text}}
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
