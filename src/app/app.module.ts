@@ -5,13 +5,16 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SymptomsFormComponent } from './components/symptoms-form/symptoms-form.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
 import { DoctorComponent } from './components/doctor/doctor.component';
-import {FormsModule} from '@angular/forms';
 import { ContactDoctorComponent } from './components/contact-doctor/contact-doctor.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import {FormsModule} from '@angular/forms';
+import {CommonModule} from '@angular/common';
+import { SignInComponent } from './components/sign-in/sign-in.component';
+import {CovidHttpInterceptor} from './interceptors/covid-http-interceptor';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SymptomsFormComponent,
     HomeComponent,
     DoctorComponent,
-    ContactDoctorComponent
+    ContactDoctorComponent,
+    SignInComponent
   ],
   imports: [
     BrowserModule,
@@ -27,9 +31,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    CommonModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: CovidHttpInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
