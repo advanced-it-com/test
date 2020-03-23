@@ -10,6 +10,8 @@ import { HomeComponent } from './components/home/home.component';
 import { DoctorComponent } from './components/doctor/doctor.component';
 import {FormsModule} from '@angular/forms';
 import { ContactDoctorComponent } from './components/contact-doctor/contact-doctor.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { ContactDoctorComponent } from './components/contact-doctor/contact-doct
     NgbModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
