@@ -1,22 +1,24 @@
 <app-home></app-home>
 <div class="card m-3 mx-auto align-middle" style="width: 25rem; text-align: center">
-    <div *ngFor="let question of showedQuestions; let i = index" class="container" 
-         style="text-align: right"  [@EnterLeave]="'flyIn'">
-        <strong class="container">{{question.text}}</strong>
-        <div class="container">
-            <div *ngFor="let suggestion of question.suggestions" class="custom-control custom-radio custom-control-inline">
-                <input type="radio" id="{{suggestion.suggestionId}}" name="suggestion" (change)="calculateScore(suggestion.score)" name="{{suggestion.suggestionId}}" class="custom-control-input">
-                <label class="custom-control-label" for="{{suggestion.suggestionId}}">
-                    {{suggestion.text}}
-                </label>
+    <div *ngIf="!messageCorona">
+        <div *ngFor="let question of showedQuestions; let i = index" class="container"
+             style="text-align: right"  [@EnterLeave]="'flyIn'">
+            <strong class="container">{{question.text}}</strong>
+            <div class="container">
+                <div *ngFor="let suggestion of question.suggestions" class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="{{suggestion.suggestionId}}" name="suggestion" (change)="calculateScore(suggestion.score)" name="{{suggestion.suggestionId}}" class="custom-control-input">
+                    <label class="custom-control-label" for="{{suggestion.suggestionId}}">
+                        {{suggestion.text}}
+                    </label>
+                </div>
             </div>
         </div>
+        <div class="d-flex justify-content-between">
+            <button type="button"[disabled]="!isPrevious()"  (click)="previous()" class="btn btn-success container" style="width: 8rem; margin: 1rem;">اللي قبلو</button>
+            <button type="button" [disabled]="!isNext()" (click)="next()" class="btn btn-success container float-sm-right" style="width: 8rem; margin: 1rem;">اللي بعدو</button>
+        </div>
+        <button type="button" *ngIf="!isNext()" (click)="getFormResults()" class="btn btn-success container" style="width: 8rem; margin: 1rem;">Soumettre</button>
     </div>
-    <div class="d-flex justify-content-between">
-        <button type="button" [disabled]="!isNext()" (click)="next()" class="btn btn-success container float-sm-right" style="width: 8rem; margin: 1rem;">next</button>
-        <button type="button"[disabled]="!isPrevious()"  (click)="previous()" class="btn btn-success container" style="width: 8rem; margin: 1rem;">previous</button>    
-    </div>
-    <button type="button" (click)="getFormResults()" class="btn btn-success container" style="width: 8rem; margin: 1rem;">Soumettre</button>
     <p *ngIf="messageCorona">{{messageCorona}}</p>
 </div>
 
