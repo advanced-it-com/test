@@ -9,7 +9,8 @@ import {FormSymptomsModule} from '../../models/form-symptoms.module';
 })
 export class SymptomsFormComponent implements OnInit {
   questions: FormSymptomsModule[];
-  images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
+  formScore = 0;
+  messageCorona: string;
 
   constructor(private symptomsformService: SymptomsformService) { }
 
@@ -17,11 +18,23 @@ export class SymptomsFormComponent implements OnInit {
     this.getQuestions();
   }
 
-   getQuestions() {
-    this.symptomsformService.getQuestions().subscribe(
+  getQuestions() {
+      this.symptomsformService.getQuestions().subscribe(
         data => {
           this.questions = data;
         }
-    );
+      );
   }
+
+   calculateScore(suggestionScore) {
+      this.formScore += suggestionScore;
+   }
+
+    getFormResults() {
+      if (this.formScore >= 4 && this.formScore <= 9) {
+          this.messageCorona = 'Cas suspect, veuillez appeler le 190';
+      } else {
+          this.messageCorona = 'Vous êtes à priori non infecté. Pour être sûr, vous pouvez entrer en contact avec un médecin';
+      }
+    }
 }

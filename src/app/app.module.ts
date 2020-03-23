@@ -8,19 +8,23 @@ import { SymptomsFormComponent } from './components/symptoms-form/symptoms-form.
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
 import { DoctorComponent } from './components/doctor/doctor.component';
+import {FormsModule} from '@angular/forms';
+import { ContactDoctorComponent } from './components/contact-doctor/contact-doctor.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SymptomsFormComponent,
     HomeComponent,
-    DoctorComponent
+    DoctorComponent,
+    ContactDoctorComponent
   ],
   imports: [
     BrowserModule,
     NgbModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

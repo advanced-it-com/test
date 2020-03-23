@@ -6,7 +6,7 @@
 	      {
 		      "suggestionId": 1,
 		      "text": "نعم Oui",
-              "score": 20
+              "score": 2
           },
          {
 		      "suggestionId": 2,
@@ -22,7 +22,7 @@
 	      {
 		      "suggestionId": 3,
 		      "text": "نعم Oui",
-              "score": 20
+              "score": 2
           },
          {
 		      "suggestionId": 4,
@@ -38,7 +38,7 @@
 	      {
 		      "suggestionId": 5,
 		      "text": "نعم Oui",
-              "score": 20
+              "score": 2
           },
           {
 		      "suggestionId": 6,
