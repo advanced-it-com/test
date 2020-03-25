@@ -1,28 +1,30 @@
-<app-home></app-home>
-<div class="container margin-top-100-px">
-<div class="card" style="width: 80%;margin: auto">
-  <h5 class="card-header text-center">تسجيل الدخول</h5>
-  <div class="card-body form-container" dir="rtl">
+<div class="container login-form">
+<div class="card">
+  <h5 class="card-header">تسجيل الدخول</h5>
+  <div class="card-body" dir="rtl">
     <div *ngIf="displaySignInFailedMessage" class="text-danger text-align-right">
       اسم مستخدم أو كلمة مرور غير صحيحة
     </div>
     <form (ngSubmit)="signIn()">
-      <div class="form-group text-align-right">
-        <label for="userName">إسم المستخدم</label>
+      <div class="form-group text-align-right form-inline">
+        <label class="ml-4" for="userName">إسم المستخدم</label>
         <input type="text" class="form-control"
                name="userName"
                [(ngModel)]="signInRequestModel.userName"
                id="userName">
       </div>
-      <div class="form-group text-align-right">
-        <label for="password">كلمة المرور</label>
+      <div class="form-group text-align-right form-inline">
+        <label class="ml-5" for="password">كلمة المرور</label>
         <input type="password" class="form-control"
                name="password"
                [(ngModel)]="signInRequestModel.password"
                id="password" >
       </div>
-      <button type="submit" class="btn btn-primary float-right">دخول</button>
     </form>
   </div>
 </div>
+  <div class="row">
+    <div class="col-sm-9"></div>
+    <button type="submit" class="btn float-right col-sm-2 link-button p-1 m-3">دخول</button>
+  </div>
 </div>
