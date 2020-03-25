@@ -10,7 +10,7 @@ export class CovidHttpInterceptor implements HttpInterceptor {
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     let isPublicUri = false;
     this.PUBLIC_URIS.forEach(url => {
-      if (url.startsWith(request.url)){
+      if (url.endsWith(request.url)){
         isPublicUri = true;
       }
     });
