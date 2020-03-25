@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiBaseUrl: 'http://localhost:8080/covid-190/api/v1'
+  apiBaseUrl: '/covid-190/api/v1'
 };
 
 /*
