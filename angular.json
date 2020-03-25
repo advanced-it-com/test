@@ -25,6 +25,7 @@
             "assets": [
               "src/assets/images/favicon.png",
               "src/assets/images/flag.jpg",
+              "src/assets/images/phone.png",
               "src/assets"
             ],
             "styles": [
@@ -90,6 +91,7 @@
             "assets": [
               "src/assets/images/favicon.png",
               "src/assets/images/flag.jpg",
+              "src/assets/images/phone.png",
               "src/assets"
             ]
           }

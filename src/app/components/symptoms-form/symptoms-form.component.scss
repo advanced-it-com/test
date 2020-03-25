@@ -11,6 +11,7 @@
   background-color: #dc3a58;
   border-radius: 0.7rem;
   width: 35vw;
+  text-decoration: none;
 }
 
 .corona-form {
@@ -22,6 +23,10 @@
 
 .corona-question {
   text-align: right;
+}
+
+.link-button {
+  width:10vw;
 }
 
 .next-button, .previous-button {
@@ -36,4 +41,11 @@
 
 .previous-button {
   border-bottom-left-radius: 2rem 2rem;
+}
+
+/* Mobile styles */
+@media only screen and (max-width: 768px) {
+  .corona-form, .corona-tips, .row {
+    width: 100%;
+  }
 }

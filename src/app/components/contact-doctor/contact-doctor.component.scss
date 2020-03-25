@@ -1,0 +1,29 @@
+.sick-form {
+  width: 35vw;
+  background-color: #27bbbd;
+  color: #297670;
+  font-weight: bold;
+  border-radius: 2rem;
+  .call-button {
+    color: #297670;
+    background-color: transparent;
+    img {
+      width: 1.5rem;
+    }
+    span {
+      font-weight: bold;
+    }
+  }
+}
+
+/* Mobile styles */
+@media only screen and (max-width: 768px) {
+  .sick-form {
+    width: 100%;
+    .card {
+      input[type="text"], input[type="tel"] {
+        width: 10rem;
+      }
+    }
+  }
+}
