@@ -55,8 +55,9 @@ export class SymptomsFormComponent implements OnInit {
     }
   }
 
-   calculateScore(suggestionScore) {
-      this.formScore += suggestionScore;
+   calculateScore(suggestionScore, questionScore) {
+      this.formScore += suggestionScore*questionScore;
+      console.log(this.formScore);
    }
 
     getFormResults() {
