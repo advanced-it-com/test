@@ -1,11 +1,12 @@
 export class FormSymptomsModule {
-    questionId: number;
+    id: number;
     text: string;
-    suggestions: SuggestionsModule[];
+    score: number;
+    responseDTOS: SuggestionsModule[];
 }
 
 export class SuggestionsModule {
-    suggestionId: number;
+    id: number;
     text: string;
     score: number;
 }
