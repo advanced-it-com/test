@@ -1,1 +1,19 @@
-<h1 class="text-center">مرحبا</h1>
+<app-home></app-home>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Patient</th>
+    <th scope="col">Last</th>
+    <th scope="col">Handle</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let patient of (inProgressPatients$ | async)">
+    <th scope="row">{{patient.phoneNumber}}</th>
+    <td>{{patient.regionName}}</td>
+    <td>{{patient.requestDate}}</td>
+    <td>@{{patient.requestScore}}</td>
+  </tr>
+  </tbody>
+</table>
