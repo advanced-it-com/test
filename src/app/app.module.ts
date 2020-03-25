@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +14,7 @@ import {FormsModule} from '@angular/forms';
 import {CommonModule} from '@angular/common';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import {CovidHttpInterceptor} from './interceptors/covid-http-interceptor';
+import { GlobalFooterComponent } from './components/global-footer/global-footer.component';
 
 @NgModule({
   declarations: [
@@ -23,11 +23,11 @@ import {CovidHttpInterceptor} from './interceptors/covid-http-interceptor';
     HomeComponent,
     DoctorComponent,
     ContactDoctorComponent,
-    SignInComponent
+    SignInComponent,
+    GlobalFooterComponent
   ],
   imports: [
     BrowserModule,
-    NgbModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
