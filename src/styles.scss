@@ -1,9 +1,12 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+@import url('https://fonts.googleapis.com/css?family=Changa|El+Messiri&display=swap');
 
 html {
   width: 100vw;
   body {
-    background-image: url("assets/images/flag.jpg");
+    font-family: 'Changa', sans-serif !important;
+
+    /* background-image: url("assets/images/flag.jpg"); */
     background-size: 100%;
     .app-header {
       background-color: #00a99d;
@@ -13,12 +16,79 @@ html {
       }
     }
     .link-button {
-      text-decoration: none;
-      text-align: center;
-      color: #00a99d;
-      border: 2px solid grey;
-      font-weight: bold;
-      border-radius: 1rem;
+   text-decoration: none;
+    text-align: center;
+    color: #00a99d;
+    border: 3px solid grey;
+    font-weight: bold;
+    border-radius: 1rem;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    max-width: 200px;
+    font-size: 20px;
     }
   }
+}
+
+
+p.container.info-corona.mt-3.p-3 {
+    max-width: 90%;
+}
+
+.row{
+      margin-right: 0px!important;
+    margin-left: 0px !important;
+}
+.question {
+      margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    font-size: 30px;
+        color: #2b2b2b;
+    font-weight: bold;
+
+}
+
+
+
+.card {
+    max-width: 93% !important;
+}
+
+
+.custom-control-label {
+    position: relative;
+    margin-bottom: 0;
+    vertical-align: top;
+    font-size: 30px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 26px;
+    background-color: #d39e00;
+    color: white;
+    min-width: 122px;
+    min-height: 46px;
+}
+
+
+
+.corona-form[_ngcontent-qws-c2] {
+    color: #000000 !important;
+
+}
+
+
+.custom-control-input:checked~.custom-control-label::before {
+  display: none !important;
+}
+.custom-control-label::after {
+  display: none !important;
+}
+
+
+.corona-form[_ngcontent-oru-c2] {
+      border: 2px solid #cecece !important;
+    border-radius: 1rem !important;
+
 }
