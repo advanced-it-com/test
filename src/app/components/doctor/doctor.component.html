@@ -13,7 +13,7 @@
   <tr *ngFor="let patient of (inProgressPatients$ | async)">
     <td>{{patient.phoneNumber}}</td>
     <td>{{patient.regionName}}</td>
-    <td>{{patient.requestDate}}</td>
+    <td>{{patient.requestDate | date: 'MM/dd/yyyy'}}</td>
     <td>{{patient.requestScore}}</td>
     <td>{{patient.requestStatus}}</td>
   </tr>
