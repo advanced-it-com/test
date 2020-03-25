@@ -1,1 +1,24 @@
-//@import "~bootstrap/dist/css/bootstrap.css";
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+html {
+  width: 100vw;
+  body {
+    background-image: url("assets/images/flag.jpg");
+    background-size: 100%;
+    .app-header {
+      background-color: #00a99d;
+      color: white;
+      .logo-corona {
+        height: 4rem;
+      }
+    }
+    .link-button {
+      text-decoration: none;
+      text-align: center;
+      color: #00a99d;
+      border: 2px solid grey;
+      font-weight: bold;
+      border-radius: 1rem;
+    }
+  }
+}
