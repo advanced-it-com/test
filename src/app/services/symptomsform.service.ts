@@ -10,7 +10,7 @@ export class SymptomsformService {
   constructor(private http: HttpClient) { }
 
   getQuestions(): Observable<FormSymptomsModule[]>  {
-    const url = '../../assets/data/covid-form.json';
+    const url = '/assets/data/covid-form.json';
     return this.http.get<FormSymptomsModule[]>(url);
 
   }
