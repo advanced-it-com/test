@@ -6,28 +6,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 @Component({
   selector: 'app-symptoms-form',
   templateUrl: './symptoms-form.component.html',
-  styleUrls: ['./symptoms-form.component.scss'],
-  animations: [
-    trigger('EnterLeave', [
-      state('flyIn', style({ transform: 'translateX(0)' })),
-      transition(':enter', [
-        style({ transform: 'translateX(-100%)' }),
-        animate('0.5s 300ms ease-in')
-      ]),
-      /*transition(':leave', [
-        animate('0.3s ease-out', style({ transform: 'translateX(100%)' }))
-      ])*/
-    ]),
-    /*trigger('slideInOut', [
-      transition(':enter', [
-        style({transform: 'translateX(-100%)'}),
-        animate('200ms ease-in', style({transform: 'translateX(0%)'}))
-      ]),
-      transition(':leave', [
-        animate('200ms ease-in', style({transform: 'translateX(-100%)'}))
-      ])
-    ])*/
-  ]
+  styleUrls: ['./symptoms-form.component.scss']
 })
 export class SymptomsFormComponent implements OnInit {
   questions: FormSymptomsModule[];

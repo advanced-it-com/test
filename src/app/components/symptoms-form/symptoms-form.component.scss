@@ -1,5 +1,39 @@
-ngb-carousel .picsum-img-wrapper {
-  position: relative;
-  height: 0;
-  padding-top: 55%; /* Keep ratio for 900x500 images */
+.card-header {
+  border-top-left-radius: 2rem 2rem;
+  border-top-right-radius: 2rem 2rem;
+  text-align: right;
+  color: white;
+  background-color: #297670;
+}
+
+.corona-tips {
+  color: white;
+  background-color: #dc3a58;
+  border-radius: 0.7rem;
+  width: 35vw;
+}
+
+.corona-form {
+  color: #297670;
+  border: 2px solid #297670;
+  border-radius: 2rem;
+  width: 45vw;
+}
+
+.corona-question {
+  text-align: right;
+}
+
+.next-button, .previous-button {
+  background-color: #27bbbd;
+  color: white;
+  font-weight: bold;
+}
+
+.next-button {
+  border-bottom-right-radius: 2rem 2rem;
+}
+
+.previous-button {
+  border-bottom-left-radius: 2rem 2rem;
 }
