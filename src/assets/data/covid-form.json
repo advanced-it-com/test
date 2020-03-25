@@ -5,12 +5,12 @@
 	   "suggestions": [
 	      {
 		      "suggestionId": 1,
-		      "text": "نعم Oui",
+		      "text": "نعم",
               "score": 2
           },
          {
 		      "suggestionId": 2,
-		      "text": "لا Non",
+		      "text": "لا",
               "score": 0
 		 }
 	   ]
@@ -21,12 +21,12 @@
 	   "suggestions": [
 	      {
 		      "suggestionId": 3,
-		      "text": "نعم Oui",
+		      "text": "نعم",
               "score": 2
           },
          {
 		      "suggestionId": 4,
-		      "text": "لا Non",
+		      "text": "لا",
               "score": 0
          }
 	   ]
@@ -37,12 +37,12 @@
 	   "suggestions": [
 	      {
 		      "suggestionId": 5,
-		      "text": "نعم Oui",
+		      "text": "نعم",
               "score": 2
           },
           {
 		      "suggestionId": 6,
-		      "text": "لا Non",
+		      "text": "لا",
               "score": 0
 		 }
 	   ]

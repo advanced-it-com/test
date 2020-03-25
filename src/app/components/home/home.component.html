@@ -1,8 +1,20 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" target="_blank" [href]="'http://www.sante.rns.tn/fr/toutes-les-actualites/1059-tout-savoir-sur-le-coronavirus'">Infos Corona</a>
-    <a class="navbar-brand" [routerLink]="'/formulaire-symptômes'">Formulaire</a>
-    <a class="navbar-brand" *ngIf="!isConnected" [routerLink]="'/se-connecter'">Se connecter</a>
-  <a class="navbar-brand" *ngIf="isConnected" [routerLink]="'/formulaire-symptômes'"
-   (click)="signOut()">Déconnection</a>
-</nav>
-
+<div class="row mt-3">
+    <div class="col-sm-4"></div>
+    <a class="col-sm-2 link-button p-1 m-1" target="_blank" [href]="'http://www.sante.rns.tn/fr/toutes-les-actualites/1059-tout-savoir-sur-le-coronavirus'">Infos Corona Virus</a>
+    <a class="col-sm-2 link-button p-1 m-1" *ngIf="!isConnected" [routerLink]="'/se-connecter'">Je suis un médecin</a>
+    <a class="col-sm-2 link-button p-1 m-1" *ngIf="isConnected" [routerLink]="'/formulaire-symptômes'" (click)="signOut()">Déconnexion</a>
+    <div class="col-sm-4"></div>
+</div>
+<p class="container info-corona mt-3 p-3">
+    <strong>Corona virus</strong><br>
+    La maladie à coronavirus 2019 (COVID-19) est une maladie infectieuse provoquée par un nouveau virus qui n'avait encore jamais été identifié chez l'être humain.
+    Ce virus provoque une maladie respiratoire (analogue à la grippe) avec des symptômes comme la toux, la fièvre et, dans les cas les plus sévères, une pneumonie. On peut s'en protéger en se lavant fréquemment les mains, et en évitant de se toucher le visage.
+    <br>
+    <br>
+    <strong>Comment la maladie se propage?</strong><br>
+    Le nouveau coronavirus 2019 se propage essentiellement par contact avec une personne infectée, lorsqu'elle tousse ou éternue, ou par l'intermédiaire des gouttelettes de salive ou de sécrétions nasales.
+</p>
+<div class="row">
+    <div class="col-sm-9"></div>
+    <a class="col-sm-2 link-button p-1 m-1" [routerLink]="'/formulaire-symptômes'">Démarrer le test</a>
+</div>
