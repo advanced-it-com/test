@@ -14,6 +14,7 @@ export class SymptomsFormComponent implements OnInit {
   currentQuestionIndex = 0;
   showedQuestions: FormSymptomsModule[] = [];
   questionsNum = 0;
+  errorMessage: string;
 
   constructor(private symptomsformService: SymptomsFormService) { }
 
@@ -27,7 +28,10 @@ export class SymptomsFormComponent implements OnInit {
           this.questions = data;
           this.showedQuestions.push(this.questions[0]);
           this.questionsNum = this.questions.length;
-        }
+        },
+          error => {
+            this.errorMessage = 'نعتذر منك ! هناك خلل تقني، نحن نعمل على إصلاحه';
+          }
       );
   }
 

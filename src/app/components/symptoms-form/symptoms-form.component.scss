@@ -53,6 +53,11 @@
   font-weight: bold;
 }
 
+.error-message, .loading-message {
+  text-align: center;
+  font-weight: bold;
+}
+
 /* Mobile styles */
 @media only screen and (max-width: 768px) {
   .corona-form, .corona-tips, .row {
