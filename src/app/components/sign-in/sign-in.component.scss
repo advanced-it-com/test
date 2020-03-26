@@ -22,17 +22,17 @@
     }
     input[type="text"], input[type="password"] {
       background-color: #27bbbd;
-      width: 25vw;
+      width: 40vw;
     }
   }
 }
 /* Mobile styles */
 @media only screen and (max-width: 768px) {
   .login-form {
-    width: 100%;
+    width: 100vw;
     .card {
       input[type="text"], input[type="password"] {
-        width: 10rem;
+        width: 70vw;
       }
     }
   }

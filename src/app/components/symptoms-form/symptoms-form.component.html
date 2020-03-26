@@ -1,20 +1,16 @@
-<div class="card mt-3 mx-auto corona-form" *ngIf="!messageCorona">
+<div class="spinner-border" *ngIf="!messageCorona && showedQuestions.length === 0"></div>
+<div class="card mt-3 mx-auto corona-form" *ngIf="!messageCorona && showedQuestions.length > 0">
     <div *ngFor="let question of showedQuestions; let i = index" class="corona-question">
-        <!-- <h5 class="card-header">السؤال </h5> -->
         <div class="p-2 question ">{{question.text}}</div>
             <div class="row mt-5">
-                <button type="button"[disabled]="!isPrevious()" (click)="previous()" class="btn previous-button col-sm-3" style="width: 8rem; margin: 1rem;">اللي قبلو</button>
-                <div *ngFor="let suggestion of question.responseDTOS" class="custom-control custom-radio custom-control-inline col-sm-2">
-                    <input type="radio" id="{{suggestion.id}}" name="suggestion" (change)="calculateScore(suggestion.score, question.score)" name="{{suggestion.id}}" class="custom-control-input">
-                    <label class="custom-control-label" for="{{suggestion.id}}">
-                        {{suggestion.text}}
-                    </label>
-                </div>
-                <button type="button" [disabled]="!isNext()" (click)="next()" class="btn next-button float-sm-right col-sm-3" style="width: 8rem; margin: 1rem;">اللي بعدو</button>
+                <button *ngFor="let suggestion of question.responseDTOS"
+                        (click)="calculateScore(suggestion.score, question.score); next();"
+                        class="btn suggestions-button col-sm-2">
+                    {{suggestion.text}}
+                </button>
             </div>
     </div>
 </div>
-<button type="button" *ngIf="!isNext() && !messageCorona" (click)="getFormResults()" class="btn link-button container mt-5">النتيجة</button>
 <div class="card container corona-tips mt-3" *ngIf="messageCorona">{{messageCorona}}</div>
 <div class="card container corona-tips mt-3">
         <span>

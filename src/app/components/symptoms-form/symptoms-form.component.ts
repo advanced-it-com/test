@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {SymptomsformService} from '../../services/symptomsform.service';
+import {SymptomsFormService} from '../../services/symptoms-form.service';
 import {FormSymptomsModule} from '../../models/form-symptoms.module';
-import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-symptoms-form',
@@ -16,7 +15,7 @@ export class SymptomsFormComponent implements OnInit {
   showedQuestions: FormSymptomsModule[] = [];
   questionsNum = 0;
 
-  constructor(private symptomsformService: SymptomsformService) { }
+  constructor(private symptomsformService: SymptomsFormService) { }
 
   ngOnInit() {
     this.getQuestions();
@@ -40,31 +39,20 @@ export class SymptomsFormComponent implements OnInit {
       this.showedQuestions.pop();
       this.currentQuestionIndex = this.currentQuestionIndex + 1;
       this.showedQuestions.push(this.questions[this.currentQuestionIndex]);
-    }
-  }
-
-  isPrevious() {
-    return !(this.currentQuestionIndex === 0);
-  }
-
-  previous() {
-    if (this.isPrevious()) {
-      this.showedQuestions.pop();
-      this.currentQuestionIndex = this.currentQuestionIndex - 1;
-      this.showedQuestions.push(this.questions[this.currentQuestionIndex]);
+    } else {
+        this.getFormResults();
     }
   }
 
    calculateScore(suggestionScore, questionScore) {
-      this.formScore += suggestionScore*questionScore;
-      console.log(this.formScore);
+      this.formScore += suggestionScore * questionScore;
    }
 
-    getFormResults() {
-      if (this.formScore >= 4 && this.formScore <= 9) {
-          this.messageCorona = 'Cas suspect, veuillez appeler le 190';
-      } else {
-          this.messageCorona = 'Vous êtes à priori non infecté. Pour être sûr, vous pouvez entrer en contact avec un médecin';
-      }
-    }
+   getFormResults() {
+     if (this.formScore >= 4 && this.formScore <= 9) {
+         this.messageCorona = 'Cas suspect, veuillez appeler le 190';
+     } else {
+         this.messageCorona = 'Vous êtes à priori non infecté. Pour être sûr, vous pouvez entrer en contact avec un médecin';
+     }
+   }
 }

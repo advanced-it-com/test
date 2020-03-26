@@ -21,26 +21,36 @@
   width: 45vw;
 }
 
+.corona-form[_ngcontent-qws-c2] {
+  color: #000000 !important;
+}
+
+.corona-form[_ngcontent-oru-c2] {
+  border: 2px solid #cecece !important;
+  border-radius: 1rem !important;
+}
+
 .corona-question {
   text-align: right;
 }
 
-.link-button {
-  width:10vw;
-}
-
-.next-button, .previous-button {
-  background-color: #27bbbd;
+.suggestions-button {
+  font-size: 1.875rem;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 1.625rem;
+  background-color: #d39e00;
   color: white;
+  min-width: 7.625rem;
+  min-height: 2.875rem;
+}
+
+.question {
+  text-align: center;
+  font-size: 1.875rem;
+  color: #2b2b2b;
   font-weight: bold;
-}
-
-.next-button {
-  border-bottom-right-radius: 2rem 2rem;
-}
-
-.previous-button {
-  border-bottom-left-radius: 2rem 2rem;
 }
 
 /* Mobile styles */

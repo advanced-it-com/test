@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { SymptomsformService } from './symptomsform.service';
+import { SymptomsFormService } from './symptoms-form.service';
 
-describe('SymptomsformService', () => {
+describe('SymptomsFormService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: SymptomsformService = TestBed.get(SymptomsformService);
+    const service: SymptomsFormService = TestBed.get(SymptomsFormService);
     expect(service).toBeTruthy();
   });
 });

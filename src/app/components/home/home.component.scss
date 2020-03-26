@@ -3,3 +3,19 @@
   border: 2px solid grey;
   border-radius: 1.5rem;
 }
+
+p.container.info-corona.mt-3.p-3 {
+  max-width: 90%;
+}
+
+.start-test{
+  background-image: url("../../../assets/images/start-test.png");
+  width: 21.5rem;
+  height: 18.75rem;
+  background-repeat: repeat;
+  background-position: center;
+  max-width: inherit !important;
+  border: 0 !important;
+  cursor: pointer;
+  margin-top: 1.25rem !important;
+}
